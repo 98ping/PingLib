@@ -22,8 +22,7 @@ abstract class PaginatedMenu(
 
     fun getButtonsInRange() : MutableMap<Int, Button> {
         val buttons = hashMapOf<Int, Button>()
-
-        // insert entry buttons
+        
         val buttonSlots = getAllPagesButtonSlots()
         if (buttonSlots.isEmpty()) {
             val minIndex = ((page - 1) * 18)
