@@ -1,0 +1,5 @@
+name: PingLib
+description: Library made by 98ping
+author: 98ping
+main: me.ninetyeightping.pinglib.PingLib
+version: beta
