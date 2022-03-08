@@ -11,7 +11,7 @@ object UUIDCache : Cache<String, UUID>() {
     {
         this.cacheMap[player.name] = player.uniqueId
 
-        PingLib.instance.jedis.resource.hset("PingLib:uuidcache", player.name, player.uniqueId.toString())
+        PingLib.instance.jedis.resource.hset("PingLib:uuidcache:", player.name, player.uniqueId.toString())
     }
 
     fun loadFromJedis() {

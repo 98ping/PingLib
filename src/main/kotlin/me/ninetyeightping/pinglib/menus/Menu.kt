@@ -16,6 +16,7 @@ abstract class Menu(
     }
 
 
+    //dont need to use update menu because it is just placing items in menu. If it gets to it ill do it
     fun openMenu() {
         val inventory = Bukkit.createInventory(null, size, getTitle(player))
 

@@ -23,8 +23,11 @@ object CooldownRepeatingTask {
                 {
                     val player = Bukkit.getPlayer(uuid)
 
-                    if (player != null) {
+                    if (player != null)
+                    {
                         cd.expire.invoke(player)
+
+                        CooldownBuilder.table.remove(cd, uuid)
                     }
                 }
 

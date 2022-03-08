@@ -56,7 +56,8 @@ class PingLib : JavaPlugin() {
            println("Player has just been hidden : " + it.name)
         }
 
-        defaultCooldownBuilder.setCooldownName("Test").onExpire {
+        defaultCooldownBuilder
+            .setCooldownName("Test").onExpire {
             it.sendMessage(CC.translate("&cYou cooldown expired"))
         }
 

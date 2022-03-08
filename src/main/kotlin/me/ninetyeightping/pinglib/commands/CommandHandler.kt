@@ -2,6 +2,7 @@ package me.ninetyeightping.pinglib.commands
 
 import me.ninetyeightping.pinglib.PingLib
 import me.ninetyeightping.pinglib.commands.default.BroadcastCommand
+import me.ninetyeightping.pinglib.commands.default.GiveCooldownCommand
 import me.ninetyeightping.pinglib.commands.default.OpenPotatoMenuCommand
 import me.ninetyeightping.pinglib.commands.default.VisibilityChangeCommand
 import org.bukkit.Bukkit
@@ -25,9 +26,9 @@ class CommandHandler {
         registerCommand(OpenPotatoMenuCommand())
         registerCommand(BroadcastCommand())
         registerCommand(VisibilityChangeCommand())
+        registerCommand(GiveCooldownCommand())
         return this
     }
-
 
 
     fun loadSimpleCommandMap() {

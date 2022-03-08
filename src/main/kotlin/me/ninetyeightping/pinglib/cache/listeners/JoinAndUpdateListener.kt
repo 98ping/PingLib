@@ -14,7 +14,5 @@ class JoinAndUpdateListener : Listener {
     @EventHandler
     fun joinAndUpdateUUIDs(event: PlayerJoinEvent) {
         UUIDCache.addPlayerToUUIDCache(event.player)
-
-
     }
 }
