@@ -2,17 +2,14 @@ package me.ninetyeightping.pinglib.commands
 
 import me.ninetyeightping.pinglib.PingLib
 import me.ninetyeightping.pinglib.commands.default.BroadcastCommand
-import me.ninetyeightping.pinglib.commands.default.GiveCooldownCommand
 import me.ninetyeightping.pinglib.commands.default.OpenPotatoMenuCommand
+import me.ninetyeightping.pinglib.commands.default.UUIDCacheCommand
 import me.ninetyeightping.pinglib.commands.default.VisibilityChangeCommand
-import org.bukkit.Bukkit
 import org.bukkit.command.Command
 import org.bukkit.command.SimpleCommandMap
 import org.bukkit.plugin.SimplePluginManager
 import java.util.*
-import java.util.function.Consumer
 import java.util.stream.Collectors
-import kotlin.collections.HashMap
 
 
 class CommandHandler {
@@ -25,8 +22,7 @@ class CommandHandler {
 
         registerCommand(OpenPotatoMenuCommand())
         registerCommand(BroadcastCommand())
-        registerCommand(VisibilityChangeCommand())
-        registerCommand(GiveCooldownCommand())
+        registerCommand(UUIDCacheCommand())
         return this
     }
 

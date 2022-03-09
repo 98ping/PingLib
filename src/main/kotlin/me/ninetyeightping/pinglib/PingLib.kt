@@ -3,8 +3,6 @@ package me.ninetyeightping.pinglib
 import me.ninetyeightping.pinglib.cache.listeners.JoinAndUpdateListener
 import me.ninetyeightping.pinglib.cache.types.UUIDCache
 import me.ninetyeightping.pinglib.commands.CommandHandler
-import me.ninetyeightping.pinglib.cooldown.CooldownBuilder
-import me.ninetyeightping.pinglib.cooldown.CooldownRepeatingTask
 import me.ninetyeightping.pinglib.menus.listener.MenuListener
 import me.ninetyeightping.pinglib.util.CC
 import me.ninetyeightping.pinglib.visibility.VisibilityManager
@@ -23,9 +21,9 @@ class PingLib : JavaPlugin() {
 
     lateinit var jedis: JedisPool
     lateinit var commandHandler: CommandHandler
-    lateinit var defaultCooldownBuilder: CooldownBuilder
 
     lateinit var defaultVisibilityHandler: VisibilityManager
+
 
 
     override fun onEnable() {
@@ -55,13 +53,6 @@ class PingLib : JavaPlugin() {
             }
            println("Player has just been hidden : " + it.name)
         }
-
-        defaultCooldownBuilder
-            .setCooldownName("Test").onExpire {
-            it.sendMessage(CC.translate("&cYou cooldown expired"))
-        }
-
-        CooldownRepeatingTask.startCooldownChecking()
 
         server.pluginManager.registerEvents(JoinAndUpdateListener(), this)
         server.pluginManager.registerEvents(MenuListener(), this)

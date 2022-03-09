@@ -15,7 +15,7 @@ object UUIDCache : Cache<String, UUID>() {
     }
 
     fun loadFromJedis() {
-        for (entry in PingLib.instance.jedis.resource.hgetAll("PingLib:uuidcache"))
+        for (entry in PingLib.instance.jedis.resource.hgetAll("PingLib:uuidcache:"))
         {
             cacheMap[entry.key] = UUID.fromString(entry.value)
         }
