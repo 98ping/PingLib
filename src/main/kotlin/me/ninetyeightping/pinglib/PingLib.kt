@@ -37,6 +37,7 @@ class PingLib : JavaPlugin() {
 
         UUIDCache.loadFromJedis()
 
+
         defaultVisibilityHandler = VisibilityManager()
             .onChangeVisibility {
             for (player in Bukkit.getOnlinePlayers())
