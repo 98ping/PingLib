@@ -60,11 +60,6 @@
 
     <repositories>
         <repository>
-            <id>jitpack</id>
-            <name>jitpack</name>
-            <url>https://jitpack.io</url>
-        </repository>
-        <repository>
             <id>sonatype</id>
             <name>Sonatype</name>
             <url>https://oss.sonatype.org/content/groups/public/</url>
